@@ -12,7 +12,7 @@ function App() {
         <div>
           <h1>52Film 🎞</h1>
         </div>
-        <MovieList />
+        <MovieList cant={20} mensaje="Hola 52i" />
       </div>
     </>
   );
