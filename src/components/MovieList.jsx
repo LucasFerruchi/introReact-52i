@@ -1,11 +1,18 @@
 import React from "react";
 import moviesList from "../data/movies.json";
 
-const MovieList = () => {
+const MovieList = (props) => {
   //Codigo JAVASCRIPT
+
+  //Props
+ const {cant, mensaje}= props;
+ console.log(cant);
+ console.log(mensaje);
 
   return (
     <>
+
+    <div>
       <div className="poster">
         {moviesList.map((movie) => (
           <div className="container-img">
@@ -16,6 +23,7 @@ const MovieList = () => {
             />
           </div>
         ))}
+      </div>
       </div>
     </>
   );
