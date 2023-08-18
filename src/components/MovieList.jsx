@@ -14,9 +14,23 @@ const MovieList = (props) => {
     return movie.rank <= cant;
   });
 
+  // Submit-----------------------------------------
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Submit!!");
+  };
+  // Submit-----------------------------------------
+
   return (
     <>
       <div>
+        {/* -------------FORMULARIO--------------- */}
+        <form onSubmit={handleSubmit}>
+          <input type="text" className="inputM" />
+          <button className="margenes">Buscar</button>
+        </form>
+        {/* ------------FORMULARIO---------------- */}
+
         <h3>{cant} mas populares!🤩</h3>
         <div className="poster">
           {listaPelis.map((movie) => (
